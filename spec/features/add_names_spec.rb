@@ -1,11 +1,11 @@
 describe Battle do
-  describe 'name entry', type: :feature do
-    it "allows two players to enter their names" do
+  feature 'name entry', type: :feature do
+    scenario "allows two players to enter their names" do
       visit '/'
       
       fill_in "player1", :with => "Jacob"
       fill_in "player2", :with => "Betsy"
-      click_button "submit"
+      click_button "Submit"
 
       
       expect(page).to have_text("Jacob")
