@@ -1,4 +1,4 @@
-class Player 
+class Player
   DEFAULT_HEALTH = 10
   attr_reader :name, :health
 

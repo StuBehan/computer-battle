@@ -2,8 +2,7 @@ require 'sinatra/base'
 require './lib/player'
 
 class Battle < Sinatra::Base
-
-enable :sessions
+  enable :sessions
 
   get '/' do
     erb :index
