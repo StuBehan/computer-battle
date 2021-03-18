@@ -1,11 +1,17 @@
 class Player 
+  DEFAULT_HEALTH = 10
+  attr_reader :name, :health
 
-  attr_accessor :health
-
-  attr_reader :name
-
-  def initialize(name)
+  def initialize(name, health = DEFAULT_HEALTH)
     @name = name
-    @health = 10
+    @health = health
+  end
+
+  def attack(player)
+    player.receive_damage
+  end
+
+  def receive_damage
+    @health -= 1
   end
 end

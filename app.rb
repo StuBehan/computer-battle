@@ -18,12 +18,14 @@ enable :sessions
   get '/play' do
     @player1 = $player1.name
     @player2 = $player2.name
+    @player2hp = $player2.health
     erb :play
   end
 
   get '/attack' do
     @player1 = $player1.name
     @player2 = $player2.name
+    $player1.attack($player2)
     erb :attack
   end
 
