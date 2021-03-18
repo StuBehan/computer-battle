@@ -1,7 +1,13 @@
 
 <h2><%=@active_player%> attacks <%=@inactive_player%></h2>
-<div class="input">
+<% if @gameover == true%>
+<h2><%=@active_player%> has defeated <%=@inactive_player%>!</h2>
+
+<form action="/">
+<input type="submit" value="New Game">
+</form>
+<% else %>
 <form action="/play">
 <input type="submit" value="Return">
 </form>
-</div>
+<% end %>

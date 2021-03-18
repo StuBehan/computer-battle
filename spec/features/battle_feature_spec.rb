@@ -1,8 +1,8 @@
 describe Battle do
   feature 'homepage', type: :feature do
-    scenario 'says Testing Infrastructure Working' do
+    scenario 'says Computer Battle!' do
       visit '/'
-      expect(page).to have_content('Testing infrastructure working!')
+      expect(page).to have_content('Computer Battle!')
     end
   end
 end

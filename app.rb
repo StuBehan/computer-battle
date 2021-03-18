@@ -27,6 +27,7 @@ class Battle < Sinatra::Base
     @active_player = $game.active_player.name
     @inactive_player = $game.inactive_player.name
     $game.attack($game.inactive_player)
+    @gameover = $game.gameover
     erb :attack
   end
 
