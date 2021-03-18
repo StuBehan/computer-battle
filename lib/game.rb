@@ -1,8 +1,15 @@
 require './lib/player'
 
 class Game
-
   attr_reader :player1, :player2, :active_player, :inactive_player, :gameover
+
+  def self.new_game(player1_name, player2_name)
+    @game = Game.new(player1_name, player2_name)
+  end
+
+  def self.instance
+    @game
+  end
 
   def initialize(player1_name, player2_name)
     @player1 = Player.new(player1_name)
